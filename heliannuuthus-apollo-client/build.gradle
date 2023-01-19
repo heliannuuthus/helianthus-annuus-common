@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.heliannuuthus'
+version = '0.0.1'
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    maven { url 'https://maven.aliyun.com/repository/spring/'}
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.ctrip.framework.apollo:apollo-client:2.0.1'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
