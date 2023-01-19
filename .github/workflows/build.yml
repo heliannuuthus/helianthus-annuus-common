@@ -1,0 +1,7 @@
+name: project ci / cd
+on: pull_request
+
+jobs:
+  build:
+    name: build
+    uses: heliannuuthus/helianthus-annuus-workflow/.github/workflows/build-java.yml@master

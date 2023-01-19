@@ -1,0 +1,8 @@
+dependencies {
+    api "org.springdoc:springdoc-openapi-starter-webflux-ui:${springDocVersion}"
+    api "org.springframework.boot:spring-boot-starter-webflux:${bootVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,19 @@
+plugins {
+    id "java-library"
+    id "maven-publish"
+    id "io.freefair.lombok" version "6.6.1"
+    id "com.diffplug.spotless" version "6.14.1"
+    id "me.qoomon.git-versioning" version "6.4.0"
+}
+
+ext {
+    apolloClientVersion = "2.0.1"
+    springDocVersion = "2.0.2"
+    bootVersion = "3.0.1"
+    r2dbcConnCompVersion = "2.1.8"
+    r2dbcSpiVersion = "1.0.0.RELEASE"
+    r2dbcPoolVersion = "1.0.0.RELEASE"
+}
+
+
+apply from: "https://cdn.jsdelivr.net/gh/heliannuuthus/helianthus-annuus-workflow/gradle/publish.gradle"

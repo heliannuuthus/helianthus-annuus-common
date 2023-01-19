@@ -1,0 +1,14 @@
+name: publish and deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish:
+    uses: heliannuuthus/helianthus-annuus-workflow/.github/workflows/publish-java.yml@master
+    permissions:
+      contents: read
+      packages: write
+    secrets:
+      user: ${{ secrets.GPR_USER }}
+      token: ${{ secrets.GPR_TOKEN }}
