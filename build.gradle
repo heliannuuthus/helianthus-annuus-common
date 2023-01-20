@@ -30,19 +30,6 @@ subprojects {
         java.srcDirs("src/main/java")
     }
 
-    tasks.register("sourcesJar", Jar) {
-        duplicatesStrategy = DuplicatesStrategy.WARN
-        archiveClassifier.set("sources")
-        from sourceSets.main.allSource
-    }
-
-
-
-    java {
-        withSourcesJar()
-        withJavadocJar()
-    }
-
     publishing {
         repositories {
             maven {
@@ -55,8 +42,7 @@ subprojects {
             }
         }
         publications {
-            gpr(MavenPublication) {
-                from(components.java)
+            mavenJava(MavenPublication) {
                 artifactId = project.name
             }
         }

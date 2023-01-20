@@ -1,2 +1,4 @@
-rootProject.name = 'helianthus-annuus-common'
-include ":heliannuuthus-apollo-client"
+rootProject.name = "helianthus-annuus-common"
+include "helianthus-annuus-apollo-client"
+include "helianthus-annuus-log4j"
+

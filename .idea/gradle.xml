@@ -9,7 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/heliannuuthus-apollo-client" />
+            <option value="$PROJECT_DIR$/helianthus-annuus-apollo-client" />
+            <option value="$PROJECT_DIR$/helianthus-annuus-log4j" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -1,4 +1,4 @@
-package com.heliannuuthus.apolloclient.helper;
+package com.heliannuuthus.apolloclient.spi;
 
 import com.ctrip.framework.apollo.core.enums.Env;
 import com.ctrip.framework.apollo.core.spi.MetaServerProvider;
