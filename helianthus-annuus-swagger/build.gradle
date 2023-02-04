@@ -1,0 +1,8 @@
+dependencies {
+    api "org.springdoc:springdoc-openapi-starter-webflux-ui:${springDocVersion}"
+    api project(":helianthus-annuus-log4j2")
+}
+
+test {
+    useJUnitPlatform()
+}

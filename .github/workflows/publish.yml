@@ -15,11 +15,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action
       - name: Publish package
-        uses: gradle/gradle-build-action
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          gpr.user: ${{ secrets.GPR_USER }}
+          gpr.token: ${{ secrets.GPR_TOKEN }}

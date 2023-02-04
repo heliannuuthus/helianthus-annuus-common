@@ -10,7 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/helianthus-annuus-apollo-client" />
-            <option value="$PROJECT_DIR$/helianthus-annuus-log4j" />
+            <option value="$PROJECT_DIR$/helianthus-annuus-log4j2" />
+            <option value="$PROJECT_DIR$/helianthus-annuus-swagger" />
           </set>
         </option>
       </GradleProjectSettings>

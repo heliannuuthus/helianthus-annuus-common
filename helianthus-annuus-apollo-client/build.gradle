@@ -1,5 +1,6 @@
 dependencies {
     api "com.ctrip.framework.apollo:apollo-client:${apolloClientVersion}"
+    api project(":helianthus-annuus-swagger")
 }
 
 tasks.named("test") {

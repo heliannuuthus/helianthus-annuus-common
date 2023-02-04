@@ -3,17 +3,21 @@ plugins {
     id "maven-publish"
 }
 
-
 ext {
     apolloClientVersion = "2.0.1"
+    springDocVersion = "2.0.2"
+    bootVersion = "3.0.1"
 }
 allprojects {
+    apply plugin: "maven-publish"
+    apply plugin: "java-library"
     group "io.github.heliannuuthus"
-    version "0.0.1"
-    tasks.withType(JavaCompile).tap {
-        configureEach {
-            options.encoding = "UTF-8"
-        }
+    version rootProject.findProperty("version")
+    tasks.withType(Jar.class).configureEach {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+    tasks.withType(GenerateModuleMetadata).configureEach {
+        enabled = false
     }
     repositories {
         maven { url "https://maven.aliyun.com/repository/public/" }
@@ -24,8 +28,17 @@ allprojects {
 }
 
 subprojects {
-    apply plugin: "java-library"
+    java {
+        withSourcesJar()
+    }
 
+    jar {
+        manifest {
+            attributes(
+                "Manifest-Version": 1.0,
+            )
+        }
+    }
     sourceSets.main {
         java.srcDirs("src/main/java")
     }
@@ -36,16 +49,18 @@ subprojects {
                 name "GitHubPackages"
                 url "https://maven.pkg.github.com/heliannuuthus/${rootProject.name}"
                 credentials {
-                    username = rootProject.findProperty("gpr.user")
-                    password = rootProject.findProperty("gpr.key")
+                    username = rootProject.findProperty("gpr.user") ?: System.getenv("gpr.user")
+                    password = rootProject.findProperty("gpr.token") ?: System.getenv("gpr.token")
                 }
             }
         }
         publications {
             mavenJava(MavenPublication) {
-                artifactId = project.name
+                from components.java
+                artifactId = "${project.name}"
             }
         }
     }
 }
+
 
