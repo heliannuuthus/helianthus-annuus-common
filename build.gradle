@@ -49,8 +49,8 @@ subprojects {
                 name "GitHubPackages"
                 url "https://maven.pkg.github.com/heliannuuthus/${rootProject.name}"
                 credentials {
-                    username = rootProject.findProperty("gpr.user") ?: System.getenv("gpr.user")
-                    password = rootProject.findProperty("gpr.token") ?: System.getenv("gpr.token")
+                    username = rootProject.findProperty("gpr.user") ?: System.getenv("GPR_USER")
+                    password = rootProject.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
                 }
             }
         }
