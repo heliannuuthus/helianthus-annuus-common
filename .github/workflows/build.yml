@@ -17,4 +17,4 @@ jobs:
       - name: Publish package
         uses: gradle/gradle-build-action
         with:
-          arguments: spotlessApply clean build
+          arguments: build
