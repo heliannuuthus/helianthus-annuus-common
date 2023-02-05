@@ -1,4 +1,4 @@
-name: publish jar on github package
+name: publish and deploy
 on:
   push:
     branches:
