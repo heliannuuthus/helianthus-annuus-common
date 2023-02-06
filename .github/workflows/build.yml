@@ -1,5 +1,4 @@
 name: project ci / cd
-on: pull_request
 
 jobs:
   build:
