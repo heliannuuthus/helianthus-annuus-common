@@ -16,7 +16,6 @@ public class ApolloInitializer implements ApplicationContextInitializer<Configur
     public void initialize(ConfigurableApplicationContext applicationContext) {
 
         /*
-         * 根据环境进行初始化 id 内容
          * spring.application.name
          * vcap.application.name
          * spring.config.name

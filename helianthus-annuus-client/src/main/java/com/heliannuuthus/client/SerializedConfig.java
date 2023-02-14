@@ -23,7 +23,7 @@ public class SerializedConfig {
     // 基础序列化反序列化规则
     mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
     mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-    // 对时间的序列化 统一使用时间为 Instant
+    // 对时间的序列化统一使用时间为Instant
 
     JavaTimeModule javaTimeModule = new JavaTimeModule();
     javaTimeModule.addSerializer(
