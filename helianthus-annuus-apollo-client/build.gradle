@@ -1,9 +1,8 @@
 dependencies {
     api "com.ctrip.framework.apollo:apollo-client:${apolloClientVersion}"
-    api "org.springframework.boot:spring-boot-starter-webflux:${bootVersion}"
+    api project(":helianthus-annuus-swagger")
 }
 
 tasks.named("test") {
     useJUnitPlatform()
 }
-
