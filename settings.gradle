@@ -5,4 +5,3 @@ include 'helianthus-annuus-swagger'
 include 'helianthus-annuus-client'
 include 'helianthus-annuus-r2dbc'
 include 'helianthus-annuus-common'
-
