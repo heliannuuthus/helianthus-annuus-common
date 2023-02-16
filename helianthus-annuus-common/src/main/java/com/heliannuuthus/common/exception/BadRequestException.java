@@ -12,4 +12,8 @@ public class BadRequestException extends ResponseStatusException {
         super(HttpStatus.BAD_REQUEST, msg);
 
     }
+
+    public static void main(String[] args) {
+        System.out.println("Hà nội");
+    }
 }
