@@ -1,2 +1,7 @@
-rootProject.name = 'heliannuuthus-common'
-include "heliannuuthus-apollo-client"
+rootProject.name = "helianthus-annuus-utilities"
+include "helianthus-annuus-apollo-client"
+include "helianthus-annuus-log4j2"
+include 'helianthus-annuus-swagger'
+include 'helianthus-annuus-client'
+include 'helianthus-annuus-r2dbc'
+include 'helianthus-annuus-common'
