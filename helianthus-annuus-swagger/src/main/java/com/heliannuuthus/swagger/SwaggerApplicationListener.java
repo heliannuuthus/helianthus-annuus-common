@@ -14,7 +14,7 @@ public class SwaggerApplicationListener implements ApplicationListener<WebServer
     public void onApplicationEvent(WebServerInitializedEvent event) {
         try {
             logger.info(
-                "swagger url: http://{}:{}/openapi-ui.html",
+                "http://{}:{}/swagger-ui.html",
                 Inet4Address.getLocalHost().getHostAddress(),
                 event.getWebServer().getPort());
         } catch (UnknownHostException e) {
