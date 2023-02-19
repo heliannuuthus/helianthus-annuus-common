@@ -16,4 +16,4 @@ ext {
 }
 
 
-apply from: "https://cdn.jsdelivr.net/gh/heliannuuthus/helianthus-annuus-workflow/gradle/publish.gradle"
+apply from: "https://raw.githubusercontent.com/heliannuuthus/helianthus-annuus-workflow/master/gradle/multi-publish.gradle"
