@@ -15,5 +15,4 @@ ext {
     r2dbcPoolVersion = "1.0.0.RELEASE"
 }
 
-
 apply from: "https://raw.githubusercontent.com/heliannuuthus/helianthus-annuus-workflow/master/gradle/multi-publish.gradle"
