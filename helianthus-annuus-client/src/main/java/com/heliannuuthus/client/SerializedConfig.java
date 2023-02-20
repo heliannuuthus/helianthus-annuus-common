@@ -10,15 +10,14 @@ import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.springframework.context.annotation.Bean;
-
 import java.io.IOException;
 import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
+import org.springframework.context.annotation.Bean;
 
 public class SerializedConfig {
-    private static final String MEDIUM_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+  private static final String MEDIUM_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
   DateTimeFormatter formatter =
       DateTimeFormatter.ofPattern(MEDIUM_DATE_FORMAT).withZone(ZoneOffset.UTC);
 
